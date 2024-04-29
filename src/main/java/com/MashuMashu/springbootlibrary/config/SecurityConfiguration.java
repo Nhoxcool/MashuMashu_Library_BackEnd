@@ -18,7 +18,7 @@ public class SecurityConfiguration {
         http.csrf().disable();
 
         // Protect endpoints at /api/<type>/secure
-        http.authorizeHttpRequests(confiuger -> confiuger.antMatchers("/api/books/secure/**").authenticated()).oauth2ResourceServer().jwt();
+        http.authorizeHttpRequests(confiuger -> confiuger.antMatchers("/api/books/secure/**", "/api/reviews/secure/**").authenticated()).oauth2ResourceServer().jwt();
 
         // add CORS Filters
         http.cors();
