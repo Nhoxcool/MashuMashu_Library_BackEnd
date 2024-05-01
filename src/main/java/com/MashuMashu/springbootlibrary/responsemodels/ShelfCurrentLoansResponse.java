@@ -5,11 +5,11 @@ import lombok.Data;
 
 @Data
 public class ShelfCurrentLoansResponse {
-    public ShelfCurrentLoansResponse(Book book, int dayLeft) {
+    public ShelfCurrentLoansResponse(Book book, int daysLeft) {
         this.book = book;
-        this.dayLeft = dayLeft;
+        this.daysLeft = daysLeft;
     }
 
     private Book book;
-    private int dayLeft;
+    private int daysLeft;
 }
