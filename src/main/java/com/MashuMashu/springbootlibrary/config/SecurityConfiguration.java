@@ -21,7 +21,8 @@ public class SecurityConfiguration {
         http.authorizeHttpRequests(confiuger -> confiuger.antMatchers(
                 "/api/books/secure/**",
                         "/api/reviews/secure/**",
-                        "api/messages/secure/**")
+                        "api/messages/secure/**",
+                        "api/admin/secure/**")
                 .authenticated()).oauth2ResourceServer().jwt();
 
         // add CORS Filters
